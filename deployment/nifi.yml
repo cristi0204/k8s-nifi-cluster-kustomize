@@ -112,7 +112,7 @@ spec:
             subPath: security.sh
             readOnly: false
           - name: lecnars
-            mountPath: /data1
+            mountPath: /opt/nifi/nifi-current/extensions/
         lifecycle:
           postStart:
             exec:
@@ -160,7 +160,6 @@ spec:
             defaultMode: 0755
         - name: lecnars
           hostPath:
-            path: /datadrive1
+            path: /datadrive1/lec-connectors
             type: Directory
-      properties:
-        customLibPath: "/data1/lec-connectors"
+
