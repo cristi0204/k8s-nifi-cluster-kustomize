@@ -48,8 +48,8 @@ spec:
               optional: false
           resources:
             requests:
-              cpu: 500m
-              memory: 1024Mi
+              cpu: 3500m
+              memory: 7500Mi
             limits:
               cpu: 3500m
               memory: 7500Mi
