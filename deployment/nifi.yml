@@ -48,11 +48,11 @@ spec:
               optional: false
           resources:
             requests:
-              cpu: 3500m
-              memory: 7500Mi
+              cpu: 3600m
+              memory: 7200Mi
             limits:
-              cpu: 3500m
-              memory: 7500Mi
+              cpu: 3600m
+              memory: 7200Mi
           securityContext:
             allowPrivilegeEscalation: false
             privileged: false
