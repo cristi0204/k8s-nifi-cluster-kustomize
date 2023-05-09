@@ -111,6 +111,8 @@ spec:
             mountPath: /scripts/security.sh
             subPath: security.sh
             readOnly: false
+          - name: lecnars
+            mountPath: /data1
         lifecycle:
           postStart:
             exec:
@@ -156,12 +158,9 @@ spec:
             name: nifi-ssl-cm
             optional: false
             defaultMode: 0755
-      extraVolumeMounts:
-        - name: lecnars
-          mountPath: /data1
-      extraVolumes:
         - name: lecnars
           hostPath:
-            path: "/datadrive1"
+            path: /datadrive1
+            type: Directory
       properties:
         customLibPath: "/data1/lec-connectors"
