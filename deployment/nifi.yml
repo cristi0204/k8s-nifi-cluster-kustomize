@@ -165,4 +165,5 @@ spec:
         - name: data
           hostPath:
             path: /datadrive0
-#             type: Directory
+            type: Directory
+            sizeLimit: 10Gi
