@@ -99,11 +99,11 @@ spec:
               name: nifi-cm
               optional: false
         volumeMounts:
-          - name: data
+          - name: lecdata
             mountPath: /opt/nifi/nifi-current/data
             subPath: data
             readOnly: false
-          - name: data
+          - name: lecdata
             mountPath: /opt/nifi/nifi-current/keytool
             subPath: keytool
             readOnly: false
@@ -162,4 +162,7 @@ spec:
           hostPath:
             path: /datadrive1/lec-connectors
             type: Directory
-
+        - name: lecdata
+          hostPath:
+            path: /datadrive0
+            type: Directory
