@@ -150,9 +150,9 @@ spec:
             drop:
               - ALL
       volumes:
-#         - name: data
-#           emptyDir:
-#             sizeLimit: 10Gi
+        - name: data
+          emptyDir:
+            sizeLimit: 10Gi
         - name: scripts
           configMap:
             name: nifi-ssl-cm
@@ -162,8 +162,8 @@ spec:
           hostPath:
             path: /datadrive1/lec-connectors
             type: Directory
-        - name: data
+        - name: lecdata
           hostPath:
             path: /datadrive0
             type: Directory
-            sizeLimit: 10Gi
+              sizeLimit: 10Gi
