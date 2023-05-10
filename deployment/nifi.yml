@@ -99,11 +99,11 @@ spec:
               name: nifi-cm
               optional: false
         volumeMounts:
-          - name: lecdata
+          - name: data
             mountPath: /opt/nifi/nifi-current/data
             subPath: data
             readOnly: false
-          - name: lecdata
+          - name: data
             mountPath: /opt/nifi/nifi-current/keytool
             subPath: keytool
             readOnly: false
@@ -150,9 +150,9 @@ spec:
             drop:
               - ALL
       volumes:
-        - name: data
-          emptyDir:
-            sizeLimit: 10Gi
+#         - name: data
+#           emptyDir:
+#             sizeLimit: 10Gi
         - name: scripts
           configMap:
             name: nifi-ssl-cm
@@ -162,7 +162,7 @@ spec:
           hostPath:
             path: /datadrive1/lec-connectors
             type: Directory
-        - name: lecdata
+        - name: data
           hostPath:
             path: /datadrive0
             type: Directory
