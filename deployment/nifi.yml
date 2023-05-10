@@ -152,7 +152,7 @@ spec:
       volumes:
         - name: data
           emptyDir:
-            sizeLimit: 15Gi
+            sizeLimit: 10Gi
         - name: scripts
           configMap:
             name: nifi-ssl-cm
