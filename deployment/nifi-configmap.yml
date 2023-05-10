@@ -3,7 +3,8 @@ kind: ConfigMap
 metadata:
   name: nifi-cm
 data:
-  JAVA_OPTS: "-XX:UseAVX=0 -Djavax.net.debug=ssl,handshake"
+  JAVA_OPTS: "-Dorg.apache.jasper.compiler.disablejsr199=true -Xms4g -Xmx4g -Djava.net.preferIPv4Stack=true -Dsun.net.http.allowRestrictedHeaders=true -Djava.protocol.handler.pkgs=sun.net.www.protocol"
+#   JAVA_OPTS: "-XX:UseAVX=0 -Djavax.net.debug=ssl,handshake"
   KEYSTORE_PASSWORD: "th1s1s3up34e5r37"
   KEYSTORE_PATH: "${NIFI_HOME}/keytool/keystore.p12"
   KEYSTORE_TYPE: "PKCS12"
