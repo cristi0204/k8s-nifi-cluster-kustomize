@@ -48,11 +48,11 @@ spec:
               optional: false
           resources:
             requests:
-              cpu: 100m
-              memory: 1000Mi
+              cpu: 20m
+              memory: 10Mi
             limits:
-              cpu: 3000m
-              memory: 7000Mi
+              cpu: 20m
+              memory: 10Mi
           securityContext:
             allowPrivilegeEscalation: false
             privileged: false
@@ -138,11 +138,11 @@ spec:
           successThreshold: 1
         resources:
           requests:
-            cpu: 100m
-            memory: 1Gi
+            cpu: 400m
+            memory: 2Gi
           limits:
-            cpu: 3000m
-            memory: 7Gi
+            cpu: 400m
+            memory: 2Gi
         securityContext:
           allowPrivilegeEscalation: false
           privileged: false
